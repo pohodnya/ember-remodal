@@ -10,14 +10,14 @@ module.exports = {
 
   treeForVendor(tree) {
     var remodalPath = path.dirname(resolve.sync('remodal'));
-    var remodalTree = new Funnel(remodalPath, {
+    var remodalTree = fastbootTransform(new Funnel(remodalPath, {
       files: [
         'remodal.min.js',
         'remodal.css',
         'remodal-default-theme.css'
       ],
       destDir: '/remodal/dist',
-    });
+    }));
 
     return new MergeTrees([tree, remodalTree]);
   },
