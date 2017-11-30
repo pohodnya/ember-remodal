@@ -4,6 +4,7 @@ var path = require("path");
 var resolve = require("resolve");
 var Funnel = require('broccoli-funnel');
 var MergeTrees = require('broccoli-merge-trees');
+var fastbootTransform = require('fastboot-transform');
 
 module.exports = {
   name: 'ember-remodal',
